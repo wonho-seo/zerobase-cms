@@ -16,6 +16,6 @@ public class SignInController {
 
     @PostMapping("/customer")
     public ResponseEntity<String> signInCustomer(@RequestBody @Validated PostSignInCustomer.Request request){
-
+        return null;
     }
 }
