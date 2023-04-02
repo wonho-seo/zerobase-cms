@@ -1,8 +1,9 @@
 package com.zerobase.cms.zerobasecms.service;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-import com.zerobase.cms.zerobasecms.domain.SignUpForm;
+import com.zerobase.cms.zerobasecms.domain.PostSignUp.PostSignUpRequest;
 import com.zerobase.cms.zerobasecms.domain.model.Customer;
 import java.time.LocalDate;
 import org.junit.jupiter.api.Test;
@@ -10,14 +11,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-
 class SignUpCustomerServiceTest {
 
     @Autowired
     private SignUpCustomerService service;
+
     @Test
     void signUp() {
-        SignUpForm form = SignUpForm.builder()
+        PostSignUpRequest form = PostSignUpRequest.builder()
             .name("name")
             .birth(LocalDate.now())
             .email("abc@naver.com")

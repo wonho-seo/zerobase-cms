@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableFeignClients
 @SpringBootApplication
 @EnableJpaAuditing
-@EnableJpaRepositories
+//@EnableJpaRepositories
 public class ZerobaseCmsApplication {
 
     public static void main(String[] args) {
