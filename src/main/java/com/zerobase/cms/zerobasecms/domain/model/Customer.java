@@ -1,6 +1,6 @@
 package com.zerobase.cms.zerobasecms.domain.model;
 
-import com.zerobase.cms.zerobasecms.domain.SignUpForm;
+import com.zerobase.cms.zerobasecms.domain.PostSignUp.PostSignUpRequest;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Locale;
@@ -13,10 +13,12 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.envers.AuditOverride;
 
 @Entity
 @Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -39,7 +41,7 @@ public class Customer extends BaseEntity {
     private String verificationCode;
     private boolean verify;
 
-    public static Customer form(SignUpForm form) {
+    public static Customer form(PostSignUpRequest form) {
         return Customer.builder()
             .email(form.getEmail().toLowerCase(Locale.ROOT))
             .password(form.getPassword())

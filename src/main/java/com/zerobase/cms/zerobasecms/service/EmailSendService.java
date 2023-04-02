@@ -10,12 +10,12 @@ import org.springframework.stereotype.Service;
 public class EmailSendService {
     private final MailgunClient mailgunClient;
 
-    public String sendEmail(){
+    public String sendEmail(String toMail, String title, String message){
         SendMailForm form = SendMailForm.builder()
             .from("sjdlrnen-test@naver.com")
-            .to("sjdlrnen0507@naver.com")
-            .subject("test1")
-            .text("text1")
+            .to(toMail)
+            .subject(title)
+            .text(message)
             .build();
 
         return mailgunClient.sendEmail(form).getBody();
