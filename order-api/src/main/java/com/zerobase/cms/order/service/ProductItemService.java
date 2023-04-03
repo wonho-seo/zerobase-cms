@@ -8,6 +8,7 @@ import com.zerobase.cms.order.domain.repository.ProductItemRepository;
 import com.zerobase.cms.order.domain.repository.ProductRepository;
 import com.zerobase.cms.order.exception.CustomException;
 import com.zerobase.cms.order.exception.ErrorCode;
+import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -43,4 +44,12 @@ public class ProductItemService {
         return productItem;
     }
 
+    @Transactional
+    public void deleteProductItem(Long sellerId, Long productItemId){
+        ProductItem productItem = productItemRepository.findById(productItemId)
+            .filter(pi->!pi.getSellerId().equals(sellerId))
+            .orElseThrow(()->new CustomException(ErrorCode.NOT_FOUND_PRODUCT));
+
+        productItemRepository.delete(productItem);
+    }
 }
