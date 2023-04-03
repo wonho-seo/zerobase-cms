@@ -4,8 +4,12 @@ plugins {
     id 'java'
 }
 
-group 'com.zerobase.cms'
-version '0.0.1-SNAPSHOT'
+bootJar{enabled = false}
+jar{enabled=true}
+
+group = 'com.zerobase.domain'
+version = 'unspecified'
+sourceCompatibility = '11'
 
 repositories {
     mavenCentral()

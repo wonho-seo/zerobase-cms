@@ -12,12 +12,6 @@ import org.springframework.stereotype.Service;
 public class CustomerService {
     private final CustomerRepository customerRepository;
 
-    public Customer findByIdAndEmail(Long id, String email){
-        return customerRepository.findById(id)
-            .stream().filter(customer -> customer.getEmail().equals(email))
-            .findFirst()
-            .orElseThrow(()->new CustomException(ErrorCode.NOT_FOUND_USER));
-    }
     public Customer findValidCustomerCustomer(String email, String password){
         Customer customer = customerRepository.findByEmail(email)
             .orElseThrow(()->new CustomException(ErrorCode.NOT_FOUND_USER));
