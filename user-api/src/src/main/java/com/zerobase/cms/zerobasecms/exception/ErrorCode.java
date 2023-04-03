@@ -13,8 +13,7 @@ public enum ErrorCode {
     WRONG_VERIFICATION(HttpStatus.BAD_REQUEST.value(), "잘못된 인증 시도입니다."),
     EXPIRE_CODE(HttpStatus.BAD_REQUEST.value(), "인증시도가 만료되었습니다."),
     WRONG_PASSWORD(HttpStatus.BAD_REQUEST.value(), "패스워드가 일치하지 않습니다."),
-    NOT_YET_VERIFICATION(HttpStatus.BAD_REQUEST.value(), "인증 되지않은 계정입니다.."),
-    INVLIDATE_JWT(HttpStatus.BAD_REQUEST.value(), "유효하지 않은 토큰입니다." );
+    NOT_YET_VERIFICATION(HttpStatus.BAD_REQUEST.value(), "인증 되지않은 계정입니다..");
 
     private final int errorCode;
     private final String message;
