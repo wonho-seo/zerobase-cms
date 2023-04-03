@@ -4,7 +4,7 @@ import com.zerobase.cms.config.JwtAuthenticationProvider;
 import com.zerobase.cms.domain.common.UserVo;
 import com.zerobase.cms.zerobasecms.exception.CustomException;
 import com.zerobase.cms.zerobasecms.exception.ErrorCode;
-import com.zerobase.cms.zerobasecms.service.CustomerService;
+import com.zerobase.cms.zerobasecms.service.customer.CustomerService;
 import java.io.IOException;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;

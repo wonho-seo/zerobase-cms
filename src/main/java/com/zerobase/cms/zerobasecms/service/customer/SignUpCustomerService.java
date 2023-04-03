@@ -1,4 +1,4 @@
-package com.zerobase.cms.zerobasecms.service;
+package com.zerobase.cms.zerobasecms.service.customer;
 
 import static com.zerobase.cms.zerobasecms.exception.ErrorCode.*;
 

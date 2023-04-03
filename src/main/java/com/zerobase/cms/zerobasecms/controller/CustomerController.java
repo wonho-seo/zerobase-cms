@@ -3,7 +3,7 @@ package com.zerobase.cms.zerobasecms.controller;
 import com.zerobase.cms.config.JwtAuthenticationProvider;
 import com.zerobase.cms.domain.common.UserVo;
 import com.zerobase.cms.zerobasecms.domain.customer.CustomerDto;
-import com.zerobase.cms.zerobasecms.service.CustomerService;
+import com.zerobase.cms.zerobasecms.service.customer.CustomerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
