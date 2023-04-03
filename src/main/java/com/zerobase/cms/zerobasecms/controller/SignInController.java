@@ -20,4 +20,8 @@ public class SignInController {
     public ResponseEntity<String> signInCustomer(@RequestBody @Validated PostSignInCustomer.Request request){
         return ResponseEntity.ok(signInApplication.customerLoginToken(request.getEmail(), request.getPassword()));
     }
+    @PostMapping("/seller")
+    public ResponseEntity<String> signInSeller(@RequestBody @Validated PostSignInCustomer.Request request){
+        return ResponseEntity.ok(signInApplication.sellerLoginToken(request.getEmail(), request.getPassword()));
+    }
 }
