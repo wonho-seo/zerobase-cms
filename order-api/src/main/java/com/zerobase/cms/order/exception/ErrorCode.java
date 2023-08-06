@@ -11,7 +11,9 @@ public enum ErrorCode {
     SAME_ITEM_NAME(HttpStatus.BAD_REQUEST.value(), "아이템 이름이 중복입니다."),
     NOT_FOUND_ITEM(HttpStatus.BAD_REQUEST.value(), "아이템 을 찾을수 없습니다."),
     CART_CHANGE_FAIL(HttpStatus.BAD_REQUEST.value(), "장바구니를 추가할수 없습니다." ),
-    ITEM_COUNT_NOT_ENOUGH(HttpStatus.BAD_REQUEST.value(), "장바구니를 추가할수 없습니다." );
+    ITEM_COUNT_NOT_ENOUGH(HttpStatus.BAD_REQUEST.value(), "장바구니를 추가할수 없습니다." ),
+    ORDER_FAIL_CHECK_CART(HttpStatus.BAD_REQUEST.value(), "주문 불가. 장바구니를 확인해 주세요" ),
+    ORDER_FAIL_NOT_ENOUGH_BALANCE(HttpStatus.BAD_REQUEST.value(), "주문 불가, 잔액 부족입니다.");
     private final int errorCode;
     private final String message;
 }

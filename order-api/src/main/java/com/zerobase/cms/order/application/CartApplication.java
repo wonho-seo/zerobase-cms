@@ -59,7 +59,7 @@ public class CartApplication {
         return getCart(customerId);
     }
 
-    private Cart refreshCart(Cart cart) {
+    protected Cart refreshCart(Cart cart) {
         Map<Long, Product> products = productSearchService.getListByProductIds(
                 cart.getProducts().stream().map(Cart.Product::getId).collect(Collectors.toList()))
             .stream()
