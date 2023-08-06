@@ -52,4 +52,12 @@ public class ProductItemService {
 
         productItemRepository.delete(productItem);
     }
+
+    public ProductItem getProductItem(Long id){
+        return productItemRepository.getById(id);
+    }
+
+    public ProductItem saveProductItem(ProductItem productItem){
+        return productItemRepository.save(productItem);
+    }
 }
