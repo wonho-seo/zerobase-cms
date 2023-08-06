@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class SignInApplication {
 
     private final CustomerService customerService;
-    private final
+
     public String customerLoginToken(String email, String password){
         Customer customer = customerService.findValidCustomerCustomer(email, password);
 
